@@ -5,9 +5,25 @@
     <title>Parallax Scrolling Demo</title>
     <link rel="stylesheet" href="css/jarallax.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/moretext.css"
 </head>
+
+
 <body>
+    <div class="background">
+       <h2 class="header-text">Xbox-bilibili series X</h2>
+<span class="shifttext">Xbox</span>
+    <div class ="moretext">
+        In winter, it is covered with snow and snow. When you climb to Jinding, you can see far and wide, and the
+        scenery is very magnificent; West overlooking Aiai snow peak, Gongga Mountain and Wawu mountain, the mountains
+        connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
+        magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
+        view of the Dadu River and Qingyi River
+    </div>
+
+</div>
+
+
     <section>
         <div class="box">
             <h2 data-jarallax-element="0 -200">Parallax Scrolling Demo One</h2>
@@ -74,6 +90,20 @@
     jarallax(document.querySelectorAll('.jarallax'), {
         speed: 0.6
     });
+</script>
+
+<script>
+    const shifttext = document.querySelector("span.shifttext")
+
+    document.addEventListener('scroll', () => {
+        const scrollY = window.scrollY
+
+        if (scrollY !== 0) {
+            shifttext.style.backgroundPosition = `${scrollY}px  ${scrollY}px`
+        }else{
+            shifttext.style.backgroundPosition = ''
+        }
+    })
 </script>
 
 
