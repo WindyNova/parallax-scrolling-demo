@@ -1,8 +1,15 @@
 .background {
   background-image: url("../images/mountain\ range.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
-  text-align: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
 }
 .header-text {
   position: absolute;
@@ -10,30 +17,19 @@
   width: 100vw;
 }
 
-.background::before {
-  content: "";
-  background-size: cover;
-  background-image: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -99;
-}
 .shifttext {
-  font: 900 39rem "";
-  background-size: cover;
+  font-size: 30em;
+  font-weight: 400;
+  background-size: 100% 100%;
   background-image: inherit;
-  background-clip: text;
+  background-attachment: fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  -webkit-text-stroke: 5px;
-  -webkit-text-stroke-color: rgb(31, 76, 181);
-  text-shadow: 0.01em 0.01em 0.01em rgba(0, 221, 255, 0.238);
 }
 .moretext {
   position: absolute;
